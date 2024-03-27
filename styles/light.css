@@ -1,12 +1,101 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --background-color: rgb(255, 241, 247);
+  --accent-color: rgb(255, 141, 203);
+  --text-color: rgb(53, 52, 48);
+  --background-color: rgb(255, 241, 247);
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  background-image: url("../images/cover-image-light.png");
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: rgb(53, 52, 48);
+}
+
+.page.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.page.theme_light .header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--text-color);
+  outline: none;
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  outline: 1px solid rgba(50, 49, 45);
+  pointer-events: none;
+}
+
+.page.theme_light .header__record {
+  visibility: hidden;
+}
+
+.page.theme_light .decorated-zone::before {
+  border-inline-end: 1px solid var(--text-color);
+  border-block-start: 1px solid var(--text-color);
+}
+
+.page.theme_light .decorated-zone::after {
+  border-inline-start: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--text-color);
+}
+
+.page.theme_light .title {
+  color: rgb(255, 194, 230);
+}
+
+.page.theme_light .content__main-title {
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --background-color: rgb(255, 241, 247);
+    --accent-color: rgb(255, 141, 203);
+    --text-color: rgb(53, 52, 48);
+    --background-color: rgb(255, 241, 247);
+  }
+
+  .page.theme_auto {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url("../images/cover-image-light.png");
+  }
+
+  .page.theme_auto .header__theme-menu-button {
+    color: rgb(53, 52, 48);
+  }
+
+  .page.theme_auto .header__theme-menu-button:hover {
+    outline: 1px solid rgba(50, 49, 45, 0.4);
+  }
+
+  .page.theme_auto .header__theme-menu-button_active {
+    outline: 1px solid rgba(50, 49, 45);
+    pointer-events: none;
+  }
+
+  .header__record {
+    visibility: hidden;
+  }
+
+  .page.theme_auto .decorated-zone::before {
+    border-inline-end: 1px solid var(--text-color);
+    border-block-start: 1px solid var(--text-color);
+  }
+
+  .page.theme_auto .decorated-zone::after {
+    border-inline-start: 1px solid var(--text-color);
+    border-block-end: 1px solid var(--text-color);
+  }
+
+  .page.theme_auto .title {
+    color: rgb(255, 194, 230);
+  }
+
+  .page.theme_auto .content__main-title {
+    color: var(--text-color);
+  }
 }
