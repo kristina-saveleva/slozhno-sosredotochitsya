@@ -4,8 +4,8 @@
 
 Что было сделано:
 
-* Работа со стилями
-* Работа с Flex и Grid элементами
-* Работа с разными состояниями (hover, active, focus)
+* Работа со стилями,
+* Работа с Flex и Grid элементами,
+* Работа с разными состояниями (hover, active, focus).
   
 ## Ссылка на репозиторий: https://github.com/kristina-saveleva/slozhno-sosredotochitsya
